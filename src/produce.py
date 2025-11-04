@@ -17,9 +17,7 @@ class Produce(Item):
         self.count = count
 
     def __str__(self):
-        repr = "\n"
-        repr += f"Name | Count\n"
-        repr += f"{self.name}, {self.count}"
+        repr = f"{self.name}, {self.count}"
         return repr
     
 if __name__ == "__main__":
@@ -27,6 +25,6 @@ if __name__ == "__main__":
     lettuce = Produce("Lettuce", 1)
     carrot = Produce("Carrot", 5)
 
-    # Print the information girl
+    # Print the information
     print(lettuce)
     print(carrot)

@@ -7,6 +7,7 @@ from produce import Produce
 
 def main():
     print("Welcome to Kitsch-Inventory.")
+    print("Name | Count")
 
     # its objects wowww
     lettuce = Produce("Lettuce", 1)
