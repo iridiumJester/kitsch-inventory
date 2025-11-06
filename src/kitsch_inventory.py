@@ -1,19 +1,11 @@
 """
 kitsch_inventory.py
 by iridiumJester
+An organizational/tracking tool for your kitchen.
 """
-from produce import Produce
-
 
 def main():
     print("Welcome to Kitsch-Inventory.")
-    print("Name | Count")
-
-    # its objects wowww
-    lettuce = Produce("Lettuce", 1)
-    print(lettuce)
-    carrot = Produce("Carrot", 5)
-    print(carrot)
 
 
 if __name__ == "__main__":

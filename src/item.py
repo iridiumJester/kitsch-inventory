@@ -1,15 +1,15 @@
 """
 item.py
 by iridiumJester
-Base class for items.
+Class for list items.
 """
 
 class Item():
     count = 0
+    def __init__(self, name, count):
+        self.name = name
+        self.count = count
 
 
-def __init__(self):
-    self.name
-    self.count
 if __name__ == "__main__":
     print(Item.count)
