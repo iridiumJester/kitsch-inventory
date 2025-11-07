@@ -15,15 +15,21 @@ def main():
         idk how to do that yet so ignore for now
     SET option to 0
     WHILE option != 4
-        DISPLAY what would you like to do? [ add/edit/view/save and exit ]
+        DISPLAY what would you like to do? [ add/edit/view/exit ]
         GET option from user
         IF option 1
+            SET chosen_category to nada
             IF no categories
                 GET category name from user
             ELSE
                 DISPLAY categories
                 GET category from user by its number in the list
-            add item
+            SET chosen_category
+            SET input to nada
+                WHILE input != end
+                    add item
+                END WHILE
+            APPEND new items to chosen_category in inventory
         ELSE IF option 2
             DISPLAY [ item/category ]
             GET user input
@@ -32,7 +38,7 @@ def main():
             DISPLAY inventory
             this would print a little at a time so it would need user input for movement between pages
         ELSE IF option 4
-            DISPLAY saving and exiting...
+            DISPLAY saving...
         ELSE
             DISPLAY not an option
         END IF
