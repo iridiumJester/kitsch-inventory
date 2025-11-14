@@ -3,9 +3,19 @@ kitsch_inventory.py
 by iridiumJester
 An organizational/tracking tool for your kitchen.
 """
+import json
+
+try:
+    with open('messages.json', 'r') as user_file:
+        data = json.load(user_file)
+            
+        print(data)
+except FileNotFoundError:
+    print("Error: 'messages.json' not found.")
+except json.JSONDecodeError:
+    print("Error: Could not decode JSON from 'messages.json'. Check file format.")
 
 def main():
-    print("Welcome to Kitsch-Inventory.")
     """
     DISPLAY additional instructions
     DISPLAY start a new file or begin import. [ new/import ]
@@ -33,6 +43,12 @@ def main():
         ELSE IF option 2
             DISPLAY [ item/category ]
             GET user input
+                IF option 1 
+                    DISPLAY categories in numbered list
+                    GET user input
+                    DISPLAY items in sets of 9
+                    DISPLAY choose an item or use the arrow keys to change pages
+
             then you give them a kabillion options
         ELSE IF option 3
             DISPLAY inventory
