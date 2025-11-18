@@ -6,7 +6,7 @@ An organizational/tracking tool for your kitchen.
 import json
 
 try:
-    with open('messages.json', 'r') as user_file:
+    with open('src/kitsch_inventory/messages.json', 'r') as user_file:
         data = json.load(user_file)
             
         print(data)
@@ -18,11 +18,11 @@ except json.JSONDecodeError:
 def main():
     """
     DISPLAY additional instructions
-    DISPLAY start a new file or begin import. [ new/import ]
-    IF option 1
+    >> DISPLAY start a new file or begin import. [ new/import ]
+    >> IF option 1
         SET inventory as an empty list
-    ELSE
-        idk how to do that yet so ignore for now
+    >> ELSE
+        idk how to do this so ignore for now. thats what the arrows mean
     SET option to 0
     WHILE option != 4
         DISPLAY what would you like to do? [ add/edit/view/exit ]
@@ -49,7 +49,9 @@ def main():
                     DISPLAY items in sets of 9
                     DISPLAY choose an item or use the arrow keys to change pages
 
-            then you give them a kabillion options
+
+
+                    then you give them a kabillion options
         ELSE IF option 3
             DISPLAY inventory
             this would print a little at a time so it would need user input for movement between pages
