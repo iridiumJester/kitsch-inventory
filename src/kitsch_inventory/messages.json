@@ -1,4 +1,7 @@
 {
-    "welcome": "Welcome to Kitsch-Inventory",
-    "welcome_cont": "All questions in brackets are answered with 1, 2, 3, etc."
+    "welcome": "Welcome to Kitsch-Inventory.",
+    "welcome_cont": "All questions in brackets are answered with 1, 2, 3, etc.",
+    "main_menu_options": "What would you like to do? [ Add/edit/view/exit ]",
+    "add_menu_options": "Adding... [ Item/category ]",
+    "goodbye": "Farewell, user."
 }

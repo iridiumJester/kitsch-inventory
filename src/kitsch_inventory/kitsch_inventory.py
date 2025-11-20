@@ -8,16 +8,36 @@ import json
 try:
     with open('src/kitsch_inventory/messages.json', 'r') as user_file:
         data = json.load(user_file)
-            
-        print(data)
 except FileNotFoundError:
     print("Error: 'messages.json' not found.")
 except json.JSONDecodeError:
     print("Error: Could not decode JSON from 'messages.json'. Check file format.")
 
 def main():
+    print(data.get("welcome"))
+    print(data.get("welcome_cont"))
+    option = 0
+    while option != 4:
+        print(data.get("main_menu_options"))
+        option = input()
+        if option == 1:
+            print(data.get("add_menu_options"))
+            chosen_category = 0
+            """
+            GET categories
+            IF no categories exist
+                GET category name from user
+            ELSE
+                DISPLAY categories
+                GET category from user by its number in the list
+            SET chosen_category
+            """
+        elif option == 4:
+            print(data.get("goodbye"))
+            break
+        else:
+            print("whuh?")
     """
-    DISPLAY additional instructions
     >> DISPLAY start a new file or begin import. [ new/import ]
     >> IF option 1
         SET inventory as an empty list
