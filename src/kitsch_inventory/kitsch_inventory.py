@@ -32,11 +32,21 @@ def main():
                 GET category from user by its number in the list
             SET chosen_category
             """
+        elif option == 2:
+            print(data.get("edit_menu_options"))
+            """ DISPLAY [ item/category ]
+            GET user input
+                IF option 1 
+                    DISPLAY categories in numbered list
+                    GET user input
+                    DISPLAY items in sets of 9
+                    DISPLAY choose an item or use the arrow keys to change pages 
+            """
         elif option == 4:
             print(data.get("goodbye"))
             break
         else:
-            print("whuh?")
+            print(data.get("input_error"))
     """
     >> DISPLAY start a new file or begin import. [ new/import ]
     >> IF option 1
