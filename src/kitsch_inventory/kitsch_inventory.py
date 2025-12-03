@@ -19,7 +19,7 @@ def main():
     option = 0
     while option != 4:
         print(data.get("main_menu_options"))
-        option = input()
+        option = int(input())
         if option == 1:
             print(data.get("add_menu_options"))
             chosen_category = 0
