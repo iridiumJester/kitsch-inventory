@@ -1,9 +1,10 @@
 {
     "welcome": "Welcome to Kitsch-Inventory.",
     "welcome_cont": "All questions in brackets are answered with 1, 2, 3, etc.",
-    "main_menu_options": "What would you like to do? [ Add/edit/view/exit ]",
-    "add_menu_options": "Adding... [ Item/category ]",
-    "edit_menu_options": "Editing... [ Item/category ]",
+    "main_menu_options": "------\nWhat would you like to do? [ Add/edit/view/exit ]",
+    "add_menu_options": "\nAdding... [ Item/category ]",
+    "edit_menu_options": "\nEditing... [ Item/category ]",
+    "view_menu_options": "\nViewing... [ All/category ]",
     "goodbye": "Farewell, user.",
     "input_error": "Invalid input."
 }

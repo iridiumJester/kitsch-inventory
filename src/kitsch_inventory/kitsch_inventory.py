@@ -22,19 +22,19 @@ def main():
         option = int(input())
         if option == 1:
             print(data.get("add_menu_options"))
+            add_option = int(input())
             chosen_category = 0
             """
-            GET categories
-            IF no categories exist
-                GET category name from user
-            ELSE
+            if not inventory:
+                add_category()
+            else:
                 DISPLAY categories
                 GET category from user by its number in the list
             SET chosen_category
             """
         elif option == 2:
             print(data.get("edit_menu_options"))
-            """ DISPLAY [ item/category ]
+            """
             GET user input
                 IF option 1 
                     DISPLAY categories in numbered list
@@ -42,6 +42,10 @@ def main():
                     DISPLAY items in sets of 9
                     DISPLAY choose an item or use the arrow keys to change pages 
             """
+        elif option == 3:
+            # print
+            print("sorry i didnt do that yet") 
+
         elif option == 4:
             print(data.get("goodbye"))
             break

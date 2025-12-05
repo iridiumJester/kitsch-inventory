@@ -4,10 +4,32 @@ by iridiumJester
 The inventory where items are stored and edited.
 """
 from item import Item 
+from category import Category
+
+"""
+inventory {
+    category1 
+    category2
+}
+
+category1 {
+    item
+}
+
+category2 {
+    item
+}
+"""
+
 
 class Inventory():
+    categories = [
+        "pantry", "fridge", "freezer"
+    ]
+
     def __init__(self):    
-        # Dictionary for items
+        # Dictionary for items 
+        self.category = ""
         self.items = {}
 
     def add_item(self, item: Item):
@@ -26,10 +48,11 @@ class Inventory():
 
 if __name__ == "__main__":
     # Create category to create items
-    pantry = Inventory()
+    smiths = Inventory()
 
     # Create items and add to inventory
     apples = Item("Apples", 4)
-    pantry.add_item(apples)
+    smiths.add_item(apples)
     apples = Item("Apples", 8)
-    pantry.add_item(apples)
+    smiths.add_item(apples)
+    print(Inventory.categories)
