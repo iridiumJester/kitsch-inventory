@@ -15,21 +15,23 @@ except json.JSONDecodeError:
 
 def main():
     print(data.get("welcome"))
-    print(data.get("welcome_cont"))
     option = 0
     while option != 4:
+        print(data.get("menu"))
         print(data.get("main_menu_options"))
+
         option = int(input())
         if option == 1:
             print(data.get("add_menu_options"))
             add_option = int(input())
             chosen_category = 0
             """
-            if not inventory:
-                add_category()
-            else:
-                DISPLAY categories
-                GET category from user by its number in the list
+            GET category list length
+            SET x = category list length
+            PRINT Choose a category (1 to x)
+            FOR X
+                PRINT category with number (ex: 1 - pantry)
+            GET user input
             SET chosen_category
             """
         elif option == 2:
