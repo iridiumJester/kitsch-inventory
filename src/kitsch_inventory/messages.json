@@ -2,9 +2,10 @@
     "welcome": "Welcome to Kitsch-Inventory.",
     "menu": "What would you like to do?",
     "main_menu_options": "    1 - Add\n    2 - Edit\n    3 - View\n    4 - Exit",
-    "add_menu_options": "Adding... [ Item/category ]",
-    "edit_menu_options": "Editing... [ Item/category ]",
-    "view_menu_options": "Viewing... [ All/category ]",
+    "add_menu_options": "Adding...\n    1 - Item\n    2 - Category",
+    "category_menu_options": "Pick a category.",
+    "edit_menu_options": "Editing...\n    1 - Item\n    2 - Category",
+    "view_menu_options": "Viewing...\n    1 - All\n    2 - Category",
     "goodbye": "Farewell, user.",
     "input_error": "Invalid input."
 }

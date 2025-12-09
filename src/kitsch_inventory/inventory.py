@@ -3,8 +3,7 @@ inventory.py
 by iridiumJester
 The inventory where items are stored and edited.
 """
-from item import Item 
-from category import Category
+from item import Item
 
 """
 inventory {
@@ -24,7 +23,7 @@ category2 {
 
 class Inventory():
     categories = [
-        "pantry", "fridge", "freezer"
+        "Pantry", "Fridge", "Freezer"
     ]
 
     def __init__(self):    

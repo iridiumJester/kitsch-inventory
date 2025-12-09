@@ -4,6 +4,7 @@ by iridiumJester
 An organizational/tracking tool for your kitchen.
 """
 import json
+from inventory import Inventory
 
 try:
     with open('src/kitsch_inventory/messages.json', 'r') as user_file:
@@ -25,6 +26,11 @@ def main():
             print(data.get("add_menu_options"))
             add_option = int(input())
             chosen_category = 0
+            category_count = len(Inventory.categories)
+            print(data.get("category_menu_options"))
+            for i in range (category_count):
+                print(f"    {i + 1} - {Inventory.categories[i]}")
+            chosen_category = int(input())
             """
             GET category list length
             SET x = category list length
