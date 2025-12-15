@@ -24,24 +24,30 @@ def main():
         option = int(input())
         if option == 1:
             print(data.get("add_menu_options"))
+            # user chooses item or category
             add_option = int(input())
+            category_count = len(Inventory.categories)
+            print(data.get("category_menu_options"))
+            # display category with number (ex: 1 - pantry)
+            for i in range (category_count):
+                print(f"    {i + 1} - {Inventory.categories[i]}")
+            chosen_category = int(input())
+            if add_option == 1:
+                """
+                input = 0
+                while input != "end"
+                    add item
+                END WHILE
+                """
+        elif option == 2:
+            print(data.get("edit_menu_options"))
+            edit_option = int(input())
             chosen_category = 0
             category_count = len(Inventory.categories)
             print(data.get("category_menu_options"))
             for i in range (category_count):
                 print(f"    {i + 1} - {Inventory.categories[i]}")
             chosen_category = int(input())
-            """
-            GET category list length
-            SET x = category list length
-            PRINT Choose a category (1 to x)
-            FOR X
-                PRINT category with number (ex: 1 - pantry)
-            GET user input
-            SET chosen_category
-            """
-        elif option == 2:
-            print(data.get("edit_menu_options"))
             """
             GET user input
                 IF option 1 
