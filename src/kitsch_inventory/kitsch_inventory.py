@@ -20,45 +20,105 @@ def main():
     while option != 4:
         print(data.get("menu"))
         print(data.get("main_menu_options"))
-
         option = int(input())
         if option == 1:
+            # show options for input, said input
             print(data.get("add_menu_options"))
-            # user chooses item or category
             add_option = int(input())
-            category_count = len(Inventory.categories)
-            print(data.get("category_menu_options"))
-            # display category with number (ex: 1 - pantry)
-            for i in range (category_count):
-                print(f"    {i + 1} - {Inventory.categories[i]}")
-            chosen_category = int(input())
+
+            # different paths for adding item or category
             if add_option == 1:
-                """
-                input = 0
-                while input != "end"
-                    add item
-                END WHILE
-                """
+                # display categories to add items to
+                print(data.get("category_menu_options"))
+                category_count = len(Inventory.categories)
+                for i in range (category_count):
+                    print(f"    {i + 1} - {Inventory.categories[i]}")
+                
+                # get user input for category (accessed later)
+                chosen_category = int(input())
+                item_input = 0
+                print(data.get("add_item_msg"))
+
+                # add items loop
+                while item_input != "end":
+                    item_input = str(input())
+                    # add item
         elif option == 2:
+            # show options for input, said input
             print(data.get("edit_menu_options"))
             edit_option = int(input())
-            chosen_category = 0
+
+            # display categories
             category_count = len(Inventory.categories)
             print(data.get("category_menu_options"))
             for i in range (category_count):
                 print(f"    {i + 1} - {Inventory.categories[i]}")
             chosen_category = int(input())
+
             """
-            GET user input
-                IF option 1 
-                    DISPLAY categories in numbered list
-                    GET user input
-                    DISPLAY items in sets of 9
-                    DISPLAY choose an item or use the arrow keys to change pages 
+            if edit_option = 1:
+                # limit how many items can be printed at a time
+                visible_items = 0
+
+                GET item count for chosen_category
+                
+                if j < item_count and visible_items < 9
+                    if visible_items == 0:
+                        DISPLAY Page ? of ? for (chosen_category)
+                    keep printing :))
+                else
+                    if j >= item_count:
+                        end loop
+                    if visible_items >= 9
+                        prompt user to continue printing
+                        reset visible_items to 0
+
+
+
+
+                # aforementioned item limit
+                while visible_items < 9:
+                    # print categories items with a number
+                    for j in range (item_count):
+                        print(f"    {j + 1} - {(given categories items)[j]}")
+                        visible_items += 1
+
+                DISPLAY choose an item or use the arrow keys to change pages
+            else:
+                DISPLAY category edit options (rename, delete)
+                GET user input
+                IF user input = rename
+                IF user input = delete
             """
         elif option == 3:
-            # print
-            print("sorry i didnt do that yet") 
+            # show options for input, said input
+            print(data.get("view_menu_options"))
+            view_option = int(input())
+
+            # will be used to limit how many items will be printed at a time
+            visible_items = 0
+
+            # different paths for viewing all or category
+            if view_option == 1:
+                category_count = len(Inventory.categories)
+                i = 0
+                """
+                WHILE i != (category_count)
+                    GET category
+                    PRINT categories items in a loop like the categories
+                    GET item count for given category
+                    for j in range (item_count):
+                        print(f"    {(given categories items)[j]}")
+                        visible_items += 1
+                    i += 1
+                """
+            else:
+                # display categories
+                print(data.get("category_menu_options"))
+                category_count = len(Inventory.categories)
+                for i in range (category_count):
+                    print(f"    {i + 1} - {Inventory.categories[i]}")
+                chosen_category = int(input())
 
         elif option == 4:
             print(data.get("goodbye"))

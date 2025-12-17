@@ -46,12 +46,14 @@ class Inventory():
 
 
 if __name__ == "__main__":
-    # Create category to create items
-    smiths = Inventory()
+    # # Create category to create items
+    # smiths = Inventory()
 
-    # Create items and add to inventory
-    apples = Item("Apples", 4)
-    smiths.add_item(apples)
-    apples = Item("Apples", 8)
-    smiths.add_item(apples)
-    print(Inventory.categories)
+    # # Create items and add to inventory
+    # apples = Item("Apples", 4)
+    # smiths.add_item(apples)
+    # apples = Item("Apples", 8)
+    # smiths.add_item(apples)
+    # print(Inventory.categories)
+
+    pantry = ["Cereal bars", 2, "Spaghetti", 1]
