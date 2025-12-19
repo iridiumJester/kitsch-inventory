@@ -57,3 +57,12 @@ if __name__ == "__main__":
     # print(Inventory.categories)
 
     pantry = ["Cereal bars", 2, "Spaghetti", 1]
+
+    pantry_count = int(len(pantry) / 2)
+    print(pantry_count)
+
+    for i in range(0, len(pantry), 2):
+        if i + 1 < len(pantry):
+            print(f"{pantry[i]}: {pantry[i+1]}")
+        else:
+            print(pantry[i])

@@ -55,41 +55,42 @@ def main():
                 print(f"    {i + 1} - {Inventory.categories[i]}")
             chosen_category = int(input())
 
-            """
-            if edit_option = 1:
-                # limit how many items can be printed at a time
+            if edit_option == 1:
                 visible_items = 0
 
-                GET item count for chosen_category
-                
-                if j < item_count and visible_items < 9
-                    if visible_items == 0:
-                        DISPLAY Page ? of ? for (chosen_category)
-                    keep printing :))
-                else
-                    if j >= item_count:
-                        end loop
-                    if visible_items >= 9
-                        prompt user to continue printing
-                        reset visible_items to 0
+                item_count = int(category_count / 2)
+                j = 0
 
+                while j != item_count:
+                    if j < item_count and visible_items < 9:
+                        if visible_items == 0:
+                            print(f"Page ? of ? for {Inventory.categories[chosen_category - 1]}")
+                    else:
+                        if j >= item_count:
+                            break
+                        if visible_items >= 9:
+                            # prompt user to continue printing
+                            #r eset visible_items to 0
+                            input("Press enter to continue.")
+                            visible_items = 0
 
-
-
-                # aforementioned item limit
-                while visible_items < 9:
+                    while visible_items < 9:
                     # print categories items with a number
-                    for j in range (item_count):
-                        print(f"    {j + 1} - {(given categories items)[j]}")
-                        visible_items += 1
+                        for i in range(0, len(category), 2):
+                            if i + 1 < len(category):
+                                print(f"    {i + 1} - {category[i]}: {category[i+1]}")
+                            else:
+                                print(category[i])
+                            visible_items += 1
 
-                DISPLAY choose an item or use the arrow keys to change pages
-            else:
-                DISPLAY category edit options (rename, delete)
-                GET user input
-                IF user input = rename
-                IF user input = delete
-            """
+                    # DISPLAY choose an item or use the arrow keys to change pages
+                else:
+                    # DISPLAY category edit options (rename, delete)
+                    # GET user input
+                    # IF user input = rename
+                    # IF user input = delete
+                    print("pylance go away")
+
         elif option == 3:
             # show options for input, said input
             print(data.get("view_menu_options"))
@@ -175,4 +176,19 @@ def main():
 
 
 if __name__ == "__main__":
+    category1 = ["Cereal bars", 2, "Spaghetti", 1]
+
+    category = category1
+
+    category_count = int(len(category) / 2)
+    print(category_count)
+
+    for i in range(0, len(category), 2):
+        if i + 1 < len(category):
+            print(f"{category[i]}: {category[i+1]}")
+        else:
+            print(category[i])
+
     main()
+
+    
